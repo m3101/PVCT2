@@ -41,7 +41,7 @@
 
 \section{Describing the maximisation problem}
 \subsection{Determinants and scatter}
-The determinant of a scatter matrix can be interpreted as a measurement of the total "dispersion" of that set of data\cite{statanalysis}.
+The determinant of a scatter matrix can be interpreted as a measurement of the total dispersion of that set of data\cite{statanalysis}.
 \subsection{LDA}
 Given the scatter matrix for variation "between" classes $S_b$ and the scatter matrix for variation "within" classes $S_w$ and assuming the derivative represents the scatter, the ratio to be maximised can be derived as follows:
 \begin{equation}
@@ -52,7 +52,7 @@ Given the scatter matrix for variation "between" classes $S_b$ and the scatter m
    \end{split}
 \end{equation}
 
-The problem of maximising a matrix's determinant using a linear transformation $WAW^T$ is equivalent to finding the roots of its characteristic polynomial (finding its eigenvalues)\cite{detmax}. Therefore, maximising the $\frac{|S_b|}{|S_w|}$ ratio through a linear transformation is equivalent to finding the \textit{Eigenvectors} $W$ of $S_b\ S_w^{-1}$.
+The problem of maximising a matrix's determinant using a linear transformation $WAW^T$ is equivalent to finding the roots of its characteristic polynomial (finding its eigenvalues)\cite{detmax}. Therefore, maximising the $\frac{|S_b|}{|S_w|}$ ratio through a linear transformation is equivalent to finding the \textit{Eigenvectors} $W_i$ of $S_b\ S_w^{-1}$.
 
 \subsection{PCA}
 Following the same logic, maximising the scatter $|S|$ with a linear transformation is equivalent to finding the \textit{Eigenvectors} $W$ of $S$.
@@ -97,7 +97,7 @@ Person 3's projection includes two samples from Person 2's set. Person 4's proje
 Improving the threshold calculation and using a more robust classifier would likely solve those problems.
 
 \section{Visual differences evidenced by projection weights}
-By comparing each person's most important features with sample projections it's possible to visually understand why those characteristics were chosen for the resulting discrimination.
+By comparing each person's most statistically important features with sample projections it is possible to visually understand why those characteristics were chosen for the resulting discrimination.
 
 \begin{figure}[H]
    \begin{center}
@@ -131,7 +131,7 @@ Person 2 presents a very idiosyncratic walk pattern, keeping both feet almost in
       \caption{Person 3's feature importances}
    \end{center}
 \end{figure}
-Person 3's main feature is their left knee's position at moment 0 (the leftmost/red skeleton on the sample images). It's bent at a shallower angle than all other subjects' samples.
+Person 3's main feature is their left knee's position at moment 0 (the leftmost/red skeleton on the sample images). It is bent at a shallower angle than all other subjects' samples.
 
 \begin{figure}[H]
    \begin{center}
@@ -139,7 +139,7 @@ Person 3's main feature is their left knee's position at moment 0 (the leftmost/
       \caption{Person 4's feature importances}
    \end{center}
 \end{figure}
-Person 4 didn't have many peculiar characteristics on their gait, which reflected as a more uniform weight distribution for all features. Their most important feature comprised approximately 8\% of the projection weight, whilst for the other projections, the most important feature was always above 12\% of the projection weight.
+Person 4 didn not have many visible peculiar characteristics on their gait, which reflected as a more uniform weight distribution for all features. Their most important feature comprised approximately 8\% of the projection weight, whilst for the other projections, the most important feature was always above 12\% of the projection weight.
 
 \bibliography{refs}
 

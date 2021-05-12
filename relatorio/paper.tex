@@ -59,7 +59,7 @@
    \end{flushright}
 \end{center}
 
-Fisher’s Linear Discriminant Analysis (henceforth “LDA”) has been utilised in a multitude of fields across its long history to classify and differentiate populations, from medical data analysis to face recognition (where it’s widely known as the Fisherfaces method).
+Fisher’s Linear Discriminant Analysis (henceforth “LDA”) has been utilised in a multitude of fields across its long history to classify and differentiate populations, from medical data analysis to face recognition (where it is widely known as the Fisherfaces method).
 
 LDA fundamentally provides us with a projection in which dispersion within the classes is minimised and class separation is maximised\cite{fisher}. This allows a multi-variable problem to be treated as a single-variable problem or a simpler multi-variable problem by projecting the data onto axes which describe a more marked distinction between the classes\cite{dimred}\cite{statanalysis}.
 
@@ -124,7 +124,7 @@ Solving that maximisation problem is equivalent\cite{face} to solving an eigenve
 
 \subsection{One-against-all projections}
 
-LDA allows us to calculate the optimal $N-1$ axes to separate $N$ classes, but for multi-class classification problems we can also adopt a more intuitive (and often more effective) "One-against-all" approach, also known as "Binary Relevance"\cite{binary}. That approach consists on focusing on indidvidually separating classes from all others instead of generating a general classifier. For that, multiple discriminant analyses were used to find $N$ axes that individually separate each class from the others, greatly simplifying classification.
+LDA allows us to calculate the optimal $N-1$ axes to separate $N$ classes, but for multi-class classification problems we can also adopt a more intuitive (and often more effective) "One-against-all" approach, also known as "Binary Relevance"\cite{binary}. That approach consists in focusing on indidvidually separating classes from all others instead of generating a general classifier. For that, multiple discriminant analyses were used to find $N$ axes that individually separate each class from the others, greatly simplifying classification.
 
 \begin{figure}[H]
    \begin{center}
@@ -151,7 +151,7 @@ LDA allows us to calculate the optimal $N-1$ axes to separate $N$ classes, but f
 
 \subsection{Principal Component Analysis}
 
-Calculating the scatter matrices(eq. \ref{scatter}) yields a problem when dealing with many dimensions: those matrices will be singular when the number of dimensions is greater than the number of samples used, turning the inverse matrix calculation impossible\cite{singular}.
+Calculating the scatter matrices (eq. \ref{scatter}) yields a problem when dealing with many dimensions: those matrices will be singular when the number of dimensions is greater than the number of samples used, turning the inverse matrix calculation impossible\cite{singular}.
 
 A solution for this problem is to first apply other dimensionality reduction methods to the data so the number of dimensions matches the number of samples\cite{face}. Here, \textit{Principal Component Analysis} was used to extract the $min(N_{class})$ projection axes along which the data has the most variance.
 
@@ -195,7 +195,7 @@ For ease of implementation, line vector notation was used in the code instead of
 
 \subsection{Feature importances}
 
-It's possible to estimate the importance of each measured feature by measuring its final weight on the projection\cite{statanalysis}.
+It is possible to estimate the importance of each measured feature by measuring its final weight on the projection\cite{statanalysis}.
 
 \begin{figure}[H]
    \begin{center}
